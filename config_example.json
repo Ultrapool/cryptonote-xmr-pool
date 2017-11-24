@@ -1,7 +1,7 @@
 {
-    "coin": "monero",
-    "symbol": "XMR",
-    "coinUnits": 100000000,
+    "coin": "electroneum",
+    "symbol": "ETN",
+    "coinUnits": 100,
     "coinDifficultyTarget": 120,
 
     "logging": {
@@ -19,7 +19,7 @@
     "poolServer": {
         "enabled": true,
         "clusterForks": "auto",
-        "poolAddress": "4A2Gv6uMc3vZsGMTEMnBsgaJMtQeEBCzaigneqJN8bzkTit2Di5MVm2fjE9rfWMz4yMVxSBL3Q9QzbafXUBXzUcANNnjjEn",
+        "poolAddress": "etnk86VtBRG9EFPGgdBpamgy2kYkxE8DTK1iM5Qdwy4fd1SGkVTpA2f6esqrexzV2vT4ctQpiSdxEKCKdzYck8518BwSr9abnc",
         "blockRefreshInterval": 1000,
         "minerTimeout": 900,
         "ports": [
@@ -37,17 +37,11 @@
                 "port": 7777,
                 "difficulty": 10000,
                 "desc": "High end hardware"
-            },
-            {
-                "port": 8888,
-                "difficulty": 10000,
-                "desc": "Hidden port",
-                "hidden": true
             }
         ],
         "varDiff": {
             "minDiff": 100,
-            "maxDiff": 200000,
+            "maxDiff": 100000,
             "targetTime": 100,
             "retargetTime": 30,
             "variancePercent": 30,
@@ -66,7 +60,7 @@
         },
         "banning": {
             "enabled": true,
-            "time": 600,
+            "time": 1800,
             "invalidPercent": 25,
             "checkThreshold": 30
         }
@@ -76,32 +70,32 @@
         "enabled": true,
         "interval": 600,
         "maxAddresses": 50,
-        "mixin": 3,
-        "transferFee": 5000000000,
-        "minPayment": 1000000000000,
+        "mixin": 1,
+        "transferFee": 1,
+        "minPayment": 200,
         "maxTransactionAmount": 0,
-        "denomination": 100000000000
+        "denomination": 100
     },
 
     "blockUnlocker": {
         "enabled": true,
         "interval": 30,
-        "depth": 60,
-        "poolFee": 2,
-        "devDonation": 0.1,
-        "coreDevDonation": 0.1,
-        "extraFeaturesDevDonation":0.1
+        "depth": 10,
+        "poolFee": 1.0,
+        "devDonation": 0.01,
+        "coreDevDonation": 0.01,
+        "extraFeaturesDevDonation":0.01
     },
 
     "api": {
         "enabled": true,
         "hashrateWindow": 600,
         "updateInterval": 30,
-        "port": 8117,
+        "port": 80,
         "blocks": 30,
         "payments": 30,
         "ssl": false,
-        "sslport": 8119,
+        "sslport": 443,
         "sslcert": "./certs/cert.pem",
         "sslkey": "./certs/privkey.pem",
         "sslca": "./certs/chain.pem",
@@ -110,12 +104,12 @@
 
     "daemon": {
         "host": "127.0.0.1",
-        "port": 18081
+        "port": 26968
     },
 
     "wallet": {
         "host": "127.0.0.1",
-        "port": 18082
+        "port": 26969
     },
 
     "redis": {
